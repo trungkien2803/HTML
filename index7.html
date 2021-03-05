@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+  <style>
+    form{
+      width: 700px;
+      height: 550px;
+      background-color: #fffda9
+
+    }
+
+    .header {
+      width: 90%;
+      height: 45px;
+      background-color: #d4fdd6;
+      color: #0433ff;
+      margin: 0 20px 20px;
+
+    }
+    .container {
+     padding-top: 10px;
+    }
+    h2 {
+      margin: 0 0 0 20px;
+      font-size: 40px;
+    }
+    th{
+      font-size: 20px;
+      color: #122caa;
+      text-align: left;
+    }
+
+    input {
+      border-color: #e5e5e5;
+      height: 20px;
+    }
+    button {
+      width: 120px;
+      height: 30px;
+      border-color: #e5e5e5;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <form>
+    <div class="container">
+      <div class="header">
+        <h2>Đăng kí học viên</h2>
+      </div>
+      <table cellpadding="10px";">
+        <tr>
+          <th>Họ và tên</th>
+          <td><input type="text" name="full name" style="width: 300px"></td>
+        </tr>
+        <tr>
+          <th>Ngày sinh</th>
+          <td><input type="text" name="full name"></td>
+        </tr>
+        <tr>
+          <th>Giới tính</th>
+          <td>
+            <label>
+              <input type="radio">
+              Nam
+            </label>
+            <label>
+              <input type="radio">
+              Nữ
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <th>Địa chỉ</th>
+          <td><input type="text" name="full name" style="width: 280px; height: 100px"></td>
+        </tr>
+        <tr>
+          <th>Lớp</th>
+          <td>
+            <select>
+              <option>
+                -Chọn lớp-
+              </option>
+              <option>
+                -Tiếng Anh-
+              </option>
+              <option>
+                -Tiếng Trung-
+              </option>
+              <option>
+                -Tiếng Nhật-
+              </option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><input type="text" name="full name"></td>
+        </tr>
+        <tr>
+          <th>Số điện thoại</th>
+          <td><input type="text" name="full name"></td>
+        </tr>
+        <tr>
+          <th></th>
+          <th>
+            <button type="submit" name="submitform">Đăng kí</button>
+            <button type="reset" name="resetform">Nhập lại</button>
+          </th>
+        </tr>
+      </table>
+    </div>
+
+  </form>
+</body>
+</html>
