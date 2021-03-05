@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <style>
+    label {
+      margin: 20px;
+      color: #ffac87;
+    }
+    h4 {
+      color: #4a60c2;
+    }
+    body{
+      font-family: 'DotGothic16', sans-serif;
+    }
+    button {
+      width: 150px;
+      height: 30px;
+      border-color: #e5e5e5;
+      font-size: 20px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <form method="post" style="width: 600px; height: 300px; border: 1px solid #e5e5e5; background-color: #d5feff">
+    <div style="background-color: white; margin: 20px;">
+
+      <div style="background-color: red">
+        <h2 style="text-align: center; color: white; margin: 0">Sở thích của bạn</h2>
+      </div>
+
+      <div style="display: flex;align-items: center; margin-top: 10px; padding-left: 20px" >
+        <h4 style="margin: 0;padding-right: 20px">Họ và tên</h4>
+        <input type="text" name="yourname" style="height: 20px;width: 60%; border-color: #e5e5e5">
+      </div>
+
+      <div style="display: flex;align-items: center; margin-top: 10px; padding-left: 20px" >
+        <h4 style="margin: 0;padding-right: 52px">Email</h4>
+        <input type="text" name="email" style="height: 20px;width: 40%; border-color: #e5e5e5">
+      </div>
+
+      <div style="display: flex;margin-top: 10px; padding-left: 20px" >
+        <h4 style="margin: 0;">Sở thích</h4>
+        <div>
+
+          <div>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+            </div>
+          <div>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+          </div>
+          <div>
+            <label><input type="checkbox" name="hobby">Thể thao</label>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div style="margin-left: 40px ;padding: 20px 70px">
+        <button type="submit" name="Submit form" > Gửi thông tin</button>
+        <button type="reset" name="Reset form" >Nhập lại</button>
+
+      </div>
+
+    </div>
+  </form>
+</body>
+</html>
