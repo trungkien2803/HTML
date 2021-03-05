@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    form {
+      margin-left: 10px;
+    }
+    .header{
+      border-bottom: 1px solid #e5e5e5;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    h4 {
+      margin: 5px 0;
+    }
+    li {
+      padding: 5px 0;
+    }
+    span {
+      margin: 0 45px;
+    }
+    select {
+      font-weight: bold;
+
+    }
+    option {
+      font-weight: bold;
+
+    }
+    tr {
+      width: 300px;
+      
+    }
+    th,td {
+      width: 150px;
+      border-right: 1px solid #e5e5e5;
+      border-left: 1px solid #e5e5e5;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div class="container">
+      <div class="header">
+        <h2 class="heading">Market Research Survey</h2>
+        <p class="header-text" >Please take a few moments to complete this satisfaction survey.</p>
+      </div>
+
+      <div class="content">
+        <ul class="list">
+          <li class="item">
+            <h4>What is your age range?</h4>
+            <select style="width: 600px; height: 30px">
+              <option>18-24</option>
+              <option>25-34</option>
+              <option>35-50</option>
+              <option>50+</option>
+            </select>
+          </li>
+          <li class="item">
+            <h4>What is your yearly income range?</h4>
+            <select style="width: 600px; height: 30px">
+              <option>$0-$25000</option>
+              <option>$25001-$50000</option>
+              <option>$50001-$100000</option>
+              <option>$100000+</option>
+            </select>
+          </li>
+          <li class="item">
+            <h4>Gender Identity</h4>
+            <ul>
+              <li><label><input type="radio">Male</label></li>
+              <li><label><input type="radio">Female</label></li>
+              <li><label><input type="radio">Nonbinary</label></li>
+              <li><label><input type="radio">Other</label></li>
+              <input type="text" style="margin-left: 20px; border-color: #e5e5e5">
+            </ul>
+          </li>
+          <li class="item">
+            <h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4>
+            <ul>
+              <li><label><input type="checkbox">Product 1</label></li>
+              <li><label><input type="checkbox">Product 2</label></li>
+              <li><label><input type="checkbox">Product 3</label></li>
+            </ul>
+          </li>
+          <li class="item">
+            <h4>How often would you use our new product?</h4>
+            <ul>
+              <li><label><input type="radio">Daily</label></li>
+              <li><label><input type="radio">Weekly</label></li>
+              <li><label><input type="radio">Monthly</label></li>
+            </ul>
+          </li>
+          <li class="item">
+          <h4>What would you pay for the new product?</h4>
+            <label>$ <input type="text" style="border-color: #e5e5e5"></label>
+            <label>- <input type="text" style="border-color: #e5e5e5; width: 25px"></label> <br>
+            <span>Dollars</span>
+            <span>Cents</span>
+          </li>
+          <li class="item">
+            <h4>What features would you like to see in the new product.</h4>
+            <input type="text" style="width: 700px;height: 300px; border-color: #e5e5e5">
+          </li>
+          <li class="item" style="padding-top: 20px">
+
+
+            <table style="height: 200px;width: 900px ">
+              <tr style="background-color: #e5e5e5">
+                <th></th>
+                <th>Strongly Disagree</th>
+                <th>Disagree</th>
+                <th>Agree</th>
+                <th>Strongly Agree</th>
+              </tr>
+              <tr>
+                <th>Our products are priced fairly.</th>
+                <td>
+                  <label>
+                    1
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    2
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    3
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    4
+                    <input type="radio">
+                  </label>
+                </td>
+
+              </tr>
+              <tr style="background-color: #e5e5e5">
+                <th>Our products are high quality.</th>
+                <td>
+                  <label>
+                    1
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    2
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    3
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    4
+                    <input type="radio">
+                  </label>
+                </td>
+
+              </tr>
+              <tr>
+                <th>You would recommend our product to a friend or cowoker</th>
+                <td>
+                  <label>
+                    1
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    2
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    3
+                    <input type="radio">
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    4
+                    <input type="radio">
+                  </label>
+                </td>
+
+              </tr>
+            </table>
+          </li>
+          <input type="submit" style="width: 100px; border-color: #e5e5e5; margin-top: 10px">
+        </ul>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
