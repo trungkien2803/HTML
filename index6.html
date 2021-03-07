@@ -6,73 +6,138 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
   <style>
-    label {
-      margin: 20px;
-      color: #ffac87;
+    form{
+      background-color: #d5feff;
+      width: 600px;
+      height: 360px;
+      padding-top: 20px;
     }
-    h4 {
-      color: #4a60c2;
+    .container {
+      background-color: white;
+      width: 560px;
+      height: 320px;
+      margin-left: 20px;
+      padding-top: 20px;
+
     }
-    body{
-      font-family: 'DotGothic16', sans-serif;
+    table {
+      border: 1px #e5e5e5;
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+    .header {
+      height: 40px;
+      width: 95%;
+      background-color: red;
+      color: white;
+      margin-left: 10px;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      padding-top: 5px;
+    }
+    th {
+      color: #8b98d8;
+      text-align: right;
+      padding-right: 20px;
+    }
+    td {
+      color: #ffb696;
+      padding: 10px 0;
+      width: 90px;
+      text-align: left;
     }
     button {
-      width: 150px;
-      height: 30px;
-      border-color: #e5e5e5;
-      font-size: 20px;
+      margin-top: 10px;
+      border: 1px solid #555555;
+      height: 25px;
+      font-size: 14px;
+      width: 100px;
     }
-
-
-
+    input {
+      border: 1px solid #555555;
+      outline: none;
+    }
   </style>
 </head>
 <body>
-  <form method="post" style="width: 600px; height: 300px; border: 1px solid #e5e5e5; background-color: #d5feff">
-    <div style="background-color: white; margin: 20px;">
-
-      <div style="background-color: red">
-        <h2 style="text-align: center; color: white; margin: 0">Sở thích của bạn</h2>
+  <form>
+    <div class="container">
+      <div class="header">
+        <h1>SỞ THÍCH CỦA BẠN</h1>
       </div>
+      <table>
+        <tr>
+          <th>Họ và tên</th>
+          <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td colspan="2"><input type="text"></td>
+        </tr>
+        <tr>
+          <th rowspan="3" style="vertical-align:  top; padding-top: 10px">Sở thích</th>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
 
-      <div style="display: flex;align-items: center; margin-top: 10px; padding-left: 20px" >
-        <h4 style="margin: 0;padding-right: 20px">Họ và tên</h4>
-        <input type="text" name="yourname" style="height: 20px;width: 60%; border-color: #e5e5e5">
-      </div>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
 
-      <div style="display: flex;align-items: center; margin-top: 10px; padding-left: 20px" >
-        <h4 style="margin: 0;padding-right: 52px">Email</h4>
-        <input type="text" name="email" style="height: 20px;width: 40%; border-color: #e5e5e5">
-      </div>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
 
-      <div style="display: flex;margin-top: 10px; padding-left: 20px" >
-        <h4 style="margin: 0;">Sở thích</h4>
-        <div>
-
-          <div>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-            </div>
-          <div>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-          </div>
-          <div>
-            <label><input type="checkbox" name="hobby">Thể thao</label>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div style="margin-left: 40px ;padding: 20px 70px">
-        <button type="submit" name="Submit form" > Gửi thông tin</button>
-        <button type="reset" name="Reset form" >Nhập lại</button>
-
-      </div>
-
+          <td>
+            <label>
+              <input type="checkbox">
+              Thể thao
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Gửi thông tin</button>
+          </td>
+          <td>
+            <button type="reset" style="width: 80px; margin-left: 10px">Nhập lại</button>
+          </td>
+        </tr>
+      </table>
     </div>
   </form>
 </body>
