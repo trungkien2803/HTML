@@ -47,15 +47,22 @@
             </tr>
         </table>
 
-        <p id="result" style="color: royalblue;"></p>
+        <p id="result" style="color: royalblue;">
+        </p>
         
     </form>
 
     <script>
         function convert(){
             let a = document.getElementById("amount").value;
-            let result = a * 0.000043;
-            document.getElementById("result").innerHTML = "Result = "+  result;
+            if (a > 0){
+                let result = a * 0.000043;
+                document.getElementById("result").innerHTML = "Result = "+  result;
+            }
+            else{
+                document.getElementById("result").innerHTML = "Erro";
+            }
+            
         }
         
     </script>
