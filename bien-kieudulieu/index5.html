@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 400px;
+            height: 200px;
+            background-color: black;
+            text-align: center;
+        }
+        .number {
+            height: 50px;
+            width: 100%;
+            border: 1px solid #e5e5e5;
+        }
+        input{
+            margin-right: 20px;
+            margin-top: 10px;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="number">
+                <input type="number" id = "input1" >
+                <input type="number" id = "input2" >   
+            </div>
+            <div>
+                <div>
+                    <input type="button" name="Addition" value="Addition(+)" onclick= " addition() ">
+                    <input type="button" name="Subtraction" value="Subtraction(-)" onclick= " subtraction() ">  
+                </div>
+                <div>
+                    <input type="button" name="Multiplication" value="Multiplication(*)" onclick= " multiplication() ">
+                    <input type="button" name="Division" value="Division(/)" onclick= "division()"> 
+                </div>
+            </div>
+
+            <p id="Result" style="color: white;"></p>
+        </form>
+    </div>
+    
+
+    <script>
+        function addition() {
+           let a = document.getElementById("input1").value;
+           let b = document.getElementById("input2").value;
+           a = parseFloat(a);
+           b = parseFloat(b);
+           let result = a + b;
+           document.getElementById("Result").innerHTML = 'Result = ' + result;
+        }
+        function subtraction() {
+           let a = document.getElementById("input1").value;
+           let b = document.getElementById("input2").value;
+           a = parseFloat(a);
+           b = parseFloat(b);
+           let result = a - b;
+           document.getElementById("Result").innerHTML = 'Result = ' + result;
+        }
+        function multiplication() {
+           let a = document.getElementById("input1").value;
+           let b = document.getElementById("input2").value;
+           a = parseFloat(a);
+           b = parseFloat(b);
+           let result = a * b;
+           document.getElementById("Result").innerHTML = 'Result = ' + result;
+        }
+        function division() {
+           let a = document.getElementById("input1").value;
+           let b = document.getElementById("input2").value;
+           a = parseFloat(a);
+           b = parseFloat(b);
+           let result = a / b;
+           document.getElementById("Result").innerHTML = 'Result = ' + result;
+        }
+    </script>
+</body>
+</html>
