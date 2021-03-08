@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            padding: 20px;
+        }
+        select {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/bien-kieudulieu/index4.html">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "number" name="number" id="amount"> 
+                </td>
+                <td>
+                    <select>
+                        <option>
+                            Việt Nam
+                        </option>
+                        
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>
+                            USD
+                        </option>                       
+                    </select>
+                </td>
+                <td>
+                    <input type= "button" value="Convert" onclick=" convert()">
+                </td>
+            </tr>
+        </table>
+
+        <p id="result" style="color: royalblue;"></p>
+        
+    </form>
+
+    <script>
+        function convert(){
+            let a = document.getElementById("amount").value;
+            let result = a * 0.000043;
+            document.getElementById("result").innerHTML = "Result = "+  result;
+        }
+        
+    </script>
+</body>
+</html>
