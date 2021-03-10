@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        
+            text-align: center;
+        }
+        #no {
+            position: absolute;
+            left: 800px;
+            top: 67px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <h2>Do you love me</h2>
+        <button type="button" onclick="yes()">Yes</button>
+        <button id="no" type="button" onmouseover="no()">No</button>
+    </div>
+
+
+    <script>
+        function yes (){
+            alert('Yes. You are right')
+        }
+        debugger
+        function no(){
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.left = x + 'px';
+        document.getElementById('no').style.top = y + 'px';
+
+        }
+    </script>
+</body>
+</html>
