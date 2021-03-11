@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Dự đoán 1 số
+
+    <button type="button" onclick="game()">
+        Bắt đầu
+    </button>
+    <button type="button" onclick="game()">
+        Chơi lại
+    </button>
+
+
+    <script>
+        
+        function game(){
+            var a = parseInt(prompt('Khoảng từ '));
+            var b = parseInt(prompt('đến'));
+            var number = TaoSoNgauNhien(a, b);
+            var c = parseInt(prompt('số dự đoán'));
+
+            
+        
+            if(number == c){
+                alert("bạn đã đoán đúng");
+
+            } else if(c < number) {
+                alert("Số đã chọn nhỏ hơn, hãy nhập lại")                
+                DoanLai();
+                
+
+            } else if(c > number) {
+                alert("Số đã chọn lớn hơn, hãy nhập lại")                
+                
+                DoanLai()
+            }
+
+            function TaoSoNgauNhien(a, b){
+
+                return Math.floor(Math.random() * (b - a + 1)) + a;
+            }
+            
+            function DoanLai(){
+
+                for(var i = 0; i<3; i++){
+
+                    c = prompt('Số dự đoán');
+
+                    if (c == number){
+
+                    alert("Bạn đã đoán đúng");
+
+                    break;
+                    }
+                }   
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
