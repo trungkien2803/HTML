@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number = prompt("Nhập number");
+        var count = 0;
+        var n = 2;
+        var uc = 0;
+        while (count < number ) {
+            var uc = 0;
+            for(var i = 1; i <= n; i++){
+                
+                if(n % i == 0){
+                    uc++;
+                }
+                
+            }
+            if(uc == 2){
+                document.write(n);
+                count++;
+            }
+            
+            n++
+        }
+
+    </script>
+</body>
+</html>
