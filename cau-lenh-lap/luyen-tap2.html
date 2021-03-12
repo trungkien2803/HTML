@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        // Fibonacci
+        // var f1 = 1;
+        // var fn = 0;
+        // var temp;
+        // var number = 0;
+
+
+        //     while(number < 20){
+        //         temp = f1;
+        //         f1 = f1 + fn;
+        //         fn =temp;
+        //         console.log(fn);
+        //         number++;
+                
+        //     }
+
+
+        // Giai thừa
+        // var number = prompt('Tính giai thừa số: ');
+        // var ketqua = number;
+        // if(number == 0){
+        //     alert("Kết quả = 0");
+        // } else if (number > 0){
+
+        //     for (var i = 1; i< number; i++){
+        //         ketqua *= (number -i);
+        //     }
+        //     alert("Kết quả = " + ketqua);
+
+        // } else {
+        //     alert("Nhập số nguyên dương")
+        // }
+
+        // In tam giác
+        // var number = prompt("Nhập số dòng");
+        // for(var i = 1; i <= number; i++){
+            
+        //     for(var j = number; j > i; j--){
+        //         document.write(" &nbsp ");
+        //     }
+        //     for (var k = 1; k <= i; k++ ){
+        //         document.write('*')
+        //     }
+        //     document.write('<br>')
+        // }
+
+        // In hình chữ nhật
+        var width = prompt("Nhập chiều dài");
+        var height = prompt("Nhập chiều rộng");;
+
+        for(var i = 1; i <= height; i++){
+            for(var j = 1; j <= width; j++){
+                
+                if(i >= 2 && i<height){
+                   if(j == 1 || j == width){
+                        document.write("* ")
+                   } else {
+                    document.write("&nbsp&nbsp&nbsp")
+                   }
+                    
+                }else {
+                    document.write("* ")
+                }
+                
+                
+            }
+            
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>
