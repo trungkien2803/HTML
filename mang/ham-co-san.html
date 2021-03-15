@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Nối các phần tử mảng thành 1 chuỗi 
+
+        // let arr = ["Red", "Green", "White", "Black"];
+        // let string = arr.join();        
+        // console.log(string)
+
+
+        // Chèn "-" vào giữa 2 số chẵn
+        
+        // var numbers = prompt("Nhập dãy số");
+        // var result = [numbers[0]];
+        // for (let i = 1; i< numbers.length; i++){
+        //     if(numbers[i - 1] % 2 == 0 && numbers[i] % 2 == 0){
+        //         result.push("-",numbers[i])
+        //     } else {
+        //         result.push(numbers[i]);
+        //     }
+        // }
+        // console.log(result.join(''))
+
+        // Chuyển chữ hoa thành chữ thường
+
+        var str = 'Tran Trung Kien'
+        var string =''              
+        for(let i = 0; i < str.length; i++){
+            var a = str[i].charCodeAt()
+            var b;
+            if (a == 32 ){
+                b = String.fromCharCode(a)
+            }
+            else if(a >= 65 && a <= 90 ){
+                a = a + 32;
+                b = String.fromCharCode(a)
+            }
+            else if(a>= 97 && a<= 122){
+                a = a - 32;
+                b = String.fromCharCode(a)
+            }
+
+            string += b; 
+        }
+        
+        
+        console.log(string)
+       
+        
+    </script>
+</body>
+</html>

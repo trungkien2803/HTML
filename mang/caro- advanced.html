@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <p id="output" ></p>
+    <input  type="button" name="button" id="1" value="Change" onclick="change()">
+
+    <script>
+        var arr = [];
+        var str = "";
+
+        for(let i = 0; i < 3; i++){
+            arr[i] = new Array(" . "," . "," . ")
+        }
+
+        for(let i = 0; i < 3; i++){
+            for(let j = 0; j < 3; j++){
+                str += arr[i][j] +" &nbsp;&nbsp;&nbsp"
+            }
+            str += "<br>"
+        }
+
+        document.getElementById('output').innerHTML = str
+
+
+        function change(){
+            var positionX = prompt("X ");
+            var positionY = prompt("Y ");
+                str = "";
+                arr[positionX][positionY] = prompt("0 or X")
+
+            for(let i = 0; i < 3; i++){
+                for(let j = 0; j < 3; j++){
+                    str += arr[i][j] +" &nbsp;&nbsp;&nbsp;&nbsp"
+                }
+                str += "<br>"
+            }
+         
+
+        }
+
+        
+
+      
+
+       
+
+
+
+    </script>
+       
+</body>
+</html>
