@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Quy đổi đơn vị khoảng cách</h1>
+
+    <input id="input1" type="text" placeholder="Nhập giá trị">
+    <button type="button" onclick="checkSelect()">Doi</button>
+    <p id="output"></p>
+
+    <select name="" id="select1">
+        <option value="meters">Meters</option>
+
+        <option value="feet">Feet</option>
+    </select>
+    <span>To</span>
+    <select name="" id="select2">
+        <option value="feet">Feet</option>
+        <option value="meters">Meters</option>
+    </select>
+
+    <script>
+        function footToMeter(foot){
+            meter = 0.305 * foot
+            
+            
+            document.getElementById("output").innerHTML = "Result " + meter +" meters"
+        }
+        function meterToFoot(meter){
+            foot = 3.279 * meter
+            
+            document.getElementById("output").innerHTML = "Result " + foot + " feet"   
+        }
+
+       
+       
+
+        function checkSelect(){
+            var a = document.getElementById("select1").value;
+            var b = document.getElementById("select2").value;
+            var c = document.getElementById("input1").value
+            
+
+            if(a == 'meters' && b == 'meters' ){
+                document.getElementById("output").innerHTML = "Result " + c + " meters"
+            } else if(a == 'feet' && b == 'feet'){
+                document.getElementById("output").innerHTML = "Result " + c + " feet"
+            } else if (a == 'meters' && b == 'feet' ){
+                meterToFoot(c)               
+            } else if (a == 'feet' && b == 'meters'){
+                footToMeter(c)
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>
