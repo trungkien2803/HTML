@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+        img{
+            width: 500px;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+            margin: 10px 0 0 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id = "1">
+            <img id="img1" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat1.jpg" alt="Photo">
+       
+            <img id="img2" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat2.jpg" alt="Photo">
+       
+            <img id="img3" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat3.jpg" alt="Photo">
+       
+            <img id="img4" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat4.jpg" alt="Photo">
+      
+            <img id="img5" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat5.jpg" alt="Photo">
+        </div>
+    </div>
+    <script>
+        var img = [
+        "/Cau-truc-dieu-kien/puzzle-img/monkey1.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/monkey2.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/monkey3.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/monkey4.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/monkey5.jpg",
+    
+        "/Cau-truc-dieu-kien/puzzle-img/panda1.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/panda2.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/panda3.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/panda4.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/panda5.jpg",
+
+        "/Cau-truc-dieu-kien/puzzle-img/cat1.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/cat2.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/cat3.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/cat4.jpg",
+        "/Cau-truc-dieu-kien/puzzle-img/cat5.jpg",
+        ]
+                    
+        
+        
+        
+
+        function change(id) {
+            var a = Math.floor(Math.random() * img.length );
+            document.getElementById(id).src = img[a];
+
+        }
+
+        var img1 = document.getElementById("img1").src.substring(length-7)
+        var img2 = document.getElementById("img2").src.substring(length-7)
+        var img3 = document.getElementById("img3").src.substring(length-7)
+        var img4 = document.getElementById("img4").src.substring(length-7)
+        var img5 = document.getElementById("img5").src.substring(length-7)
+
+        
+
+        
+
+       
+        
+        
+    </script>
+</body>
+</html>
