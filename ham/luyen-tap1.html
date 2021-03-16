@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload = "result()">
+    <script>
+        // function message(){
+        //     alert("Xin chao")
+        // }
+
+
+
+        var arrStars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        var arrConstellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        
+
+        function result(search){
+            var search = prompt("Star")
+            var position = arrStars.indexOf(search)
+            if(position !== -1){
+                alert(arrConstellation[position])
+            } else {
+                alert("Not found")
+            }
+        }
+
+           
+        
+    </script>
+</body>
+</html>
