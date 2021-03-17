@@ -8,10 +8,13 @@
 </head>
 <body>
     <script>
-        var arr = [2,5,22,8,9,4,15,36,44,64]
-        for(i = 0; i < arr.length; i++){
-            if(arr[i] > 10){
-                console.log(arr[i], "Vị trí " + i)
+        let a = [[1, 2, 1, 24],[8, 11, 9, 4],[7, 0, 7, 27],[7, 4, 28, 14],[3, 10, 26, 7]];
+
+
+        for(var key in a){
+            console.log("row" + key)
+            for(var i in a[key]){
+                console.log(a[key][i])
             }
         }
     </script>

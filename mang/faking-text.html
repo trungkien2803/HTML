@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Type anthing slowly</h2>
+           
+                <textarea name="text" id="input1" cols="40" rows="10" onkeyup="fakingText();"></textarea>
+            
+
+    <script>
+        var str = " Trần Trung Kiên - Sinh ngày 28/3/2000";
+        var arr = str.split("");
+        var output = "";
+
+        function fakingText(){
+            var input = document.getElementById("input1").value;
+            var a = input.length;
+
+            if(a>0){
+                for(let i = 1; i <= a; i++){
+                    output = output + arr[i];
+                    if(i == arr.length){
+                        document.getElementById("input1").value = ""
+                        output = ""
+                    } 
+                }
+            }
+            document.getElementById("input1").value = output;
+            output ="";
+        }
+    </script>
+
+</body> 
+</html>
