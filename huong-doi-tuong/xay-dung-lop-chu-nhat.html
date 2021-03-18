@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+
+    <script>
+        var Rectangle = function (width,height){
+            this.width = width;
+            this.height = height;
+
+            this.dienTich = function(){
+                return width * height;
+            }
+
+            this.chuVi = function(){
+                return (width + height) * 2;
+            }
+
+            this.createRectangle = function(){
+                var draw = document.getElementById("myCanvas").getContext("2d");
+                draw.strokeRect(400,200,width,height)
+            }
+        }
+
+        var rectangle = new Rectangle(500,200)
+        
+
+        rectangle.createRectangle()
+        
+    </script>
+
+</body>
+</html>
