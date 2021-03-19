@@ -11,148 +11,148 @@
 <body>
     <script>
         // 1.Viết một chương trình để nhập một chuỗi từ bàn phím và in ra màn hình độ dài của chuỗi đó.
-        // function strLength() {
-        //     var str = prompt("Nhập chuỗi");
-        //     alert("Độ dài chuỗi là " + str.length)
-        // }
+        function strLength() {
+            var str = prompt("Nhập chuỗi");
+            alert("Độ dài chuỗi là " + str.length)
+        }
 
         // 2.Viết hàm tính trung bình cộng của một mảng.mảng này người dùng nhập từ màn hình
-        // function avgArr() {
-        //     var length = prompt("Nhập độ dài mảng")
-        //     var arr = [];
-        //     for (let i = 0; i < length; i++) {
-        //         var value = parseInt(prompt("Nhập phần tử"))
-        //         arr.push(value)
-        //     }
-        //     var sum = 0
-        //     for (let i = 0; i < arr.length; i++) {
-        //         sum += arr[i]
-        //     }
-        //     var avg = sum / (arr.length);
-        //     alert(avg)
-        // }
+        function avgArr() {
+            var length = prompt("Nhập độ dài mảng")
+            var arr = [];
+            for (let i = 0; i < length; i++) {
+                var value = parseInt(prompt("Nhập phần tử"))
+                arr.push(value)
+            }
+            var sum = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            var avg = sum / (arr.length);
+            alert(avg)
+        }
 
         // 3.Viết hàm tìm giá trị lớn nhất, giá trị nhỏ nhất của một mảng.Mảng này người dùng nhập từ màn hình
-        // function minMax() {
-        //     var length = prompt("Nhập độ dài mảng")
-        //     var arr = [];
-        //     for (let i = 0; i < length; i++) {
-        //         var value = parseInt(prompt("Nhập phần tử"))
-        //         arr.push(value)
-        //     }
-        //     var min = arr[0];
-        //     for (let i = 1; i < arr.length; i++) {
-        //         if (min > arr[i]) {
-        //             min = arr[i]
-        //         }
-        //     }
-        //     alert(min)
-        //     var max = arr[0];
-        //     for (let i = 1; i < arr.length; i++) {
-        //         if (max < arr[i]) {
-        //             max = arr[i];
-        //         }
-        //     }
-        //     alert(max)
-        // }
+        function minMax() {
+            var length = prompt("Nhập độ dài mảng")
+            var arr = [];
+            for (let i = 0; i < length; i++) {
+                var value = parseInt(prompt("Nhập phần tử"))
+                arr.push(value)
+            }
+            var min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (min > arr[i]) {
+                    min = arr[i]
+                }
+            }
+            alert(min)
+            var max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            alert(max)
+        }
 
         // 4.Viết hàm cộng trừ nhân chia hai số nhập từ màn hình
-        // function Operator(operator) {
-        //     var a = parseInt(prompt("a"))
-        //     var b = parseInt(prompt("b"))
-        //     var result;
-        //     switch (operator) {
-        //         case "+":
-        //             result = a + b;
-        //             break;
-        //         case "-":
-        //             result = a - b;
-        //             break;
-        //         case "x":
-        //             result = a * b;
-        //             break;
-        //         case "/":
-        //             result = a / b;
-        //             break;
-        //     }
-        //     alert(result)
-        // }
+        function Operator(operator) {
+            var a = parseInt(prompt("a"))
+            var b = parseInt(prompt("b"))
+            var result;
+            switch (operator) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "x":
+                    result = a * b;
+                    break;
+                case "/":
+                    result = a / b;
+                    break;
+            }
+            alert(result)
+        }
 
         // 5.Viết hàm kiểm tra giá trị người dùng nhập có phải là số nguyên hay không.hiển thị thông báo
-        // function number() {
-        //     var number = prompt("Nhập number");
-        //     if (number == parseInt(number)) {
-        //         alert("Là số nguyên")
-        //     } else {
-        //         alert("Không phải")
-        //     }
+        function number() {
+            var number = prompt("Nhập number");
+            if (number == parseInt(number)) {
+                alert("Là số nguyên")
+            } else {
+                alert("Không phải")
+            }
 
-        // }
+        }
         // 6: Viết hàm cho phép người dùng nhập tên là hiển thị lời chào
-        // function hello() {
-        //     var name = prompt("Tên của bạn");
-        //     alert("Hello " + name)
-        // }
+        function hello() {
+            var name = prompt("Tên của bạn");
+            alert("Hello " + name)
+        }
 
         //     7.Viết chương trình cho phép thêm mới một phần tử trong mảng
-        //     function push(value, index) {
-        //         var arr = [4, 5, 8, 9];
+            function push(value, index) {
+                var arr = [4, 5, 8, 9];
 
-        //         for (let i = arr.length; i > index; i--) {
-        //             arr[i] = arr[i - 1];
-        //         }
-        //         arr[index] = value;
-        //         console.log(arr);
-        //     }
+                for (let i = arr.length; i > index; i--) {
+                    arr[i] = arr[i - 1];
+                }
+                arr[index] = value;
+                console.log(arr);
+            }
 
         //     8: Viết chương trình cho phép xóa một phần tử trong mảng
-        //     function delete1(index) {
-        //         var arr = [8, 6, 8, 5, 6, 5];
-        //         var arr2 = []
+            function delete1(index) {
+                var arr = [8, 6, 8, 5, 6, 5];
+                var arr2 = []
 
-        //         for (let i = 0; i < index; i++) {
-        //             arr2[i] = arr[i]
-        //         }
-        //         for (let j = index + 1; j < arr.length; j++) {
-        //             arr2[j - 1] = arr[j]
-        //         }
-        //         console.log(arr2);
-        //     }
+                for (let i = 0; i < index; i++) {
+                    arr2[i] = arr[i]
+                }
+                for (let j = index + 1; j < arr.length; j++) {
+                    arr2[j - 1] = arr[j]
+                }
+                console.log(arr2);
+            }
 
         // 9: Viết chương trình cho phép tìm kiếm một phần tử trong mảng
 
-        // function search(value) {
-        //     var arr = [1,66,4,6,4,8]
-        //     for (let i = 0; i < arr.length; i++) {
-        //         if (arr[i] == value) {
-        //             return i;
-        //         }
-        //     }
-        //     return -1
-        // }
+        function search(value) {
+            var arr = [1,66,4,6,4,8]
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == value) {
+                    return i;
+                }
+            }
+            return -1
+        }
 
         //   10.Viết chương trình đếm các số lượng các phần tử lặp trong mảng
-        // function count() {
-        //     var arr = [1, 1, 1, 25, 3, 44, 66, 25, 2, 1, 1];
-        //     var count = 0;
-        //     arr.sort();
+        function count() {
+            var arr = [1, 1, 1, 25, 3, 44, 66, 25, 2, 1, 1];
+            var count = 0;
+            arr.sort();
 
-        //     for (let i = 0; i < arr.length; i++) {
-        //         count = 0;
-        //         if (arr[i] == arr[i + 1]) {
-        //             continue;
-        //         }
-        //         for (let j = 0; j < arr.length; j++) {
-        //             if (arr[i] == arr[j]) {
-        //                 count++;
-        //             }
-        //         }
-        //         if (count > 1) {
-        //             console.log(arr[i] + " Xuất hiện " + count + " lần");
-        //         }
-        //     }
-        // }
-        // count();
+            for (let i = 0; i < arr.length; i++) {
+                count = 0;
+                if (arr[i] == arr[i + 1]) {
+                    continue;
+                }
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        count++;
+                    }
+                }
+                if (count > 1) {
+                    console.log(arr[i] + " Lặp " + count + " lần");
+                }
+            }
+        }
+        
     </script>
 </body>
 
