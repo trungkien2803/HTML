@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="eat1()">Ăn</button>
+    <p id= "result"></p>
+    <script>
+        class  Apple {
+            
+            constructor(w) {
+                this._weight = w;
+            }
+            decrease() {
+                this._weight--
+            }
+            isEmpty() {
+                if(this._weight > 0){
+                    return true;
+                } 
+                return false;
+            }
+            get weight(){
+                return this._weight
+            }
+        }
+        class Human {
+           
+            constructor(name,gender,weight){
+                this._name = name;
+                this._gender = gender;
+                this._weight = weight;
+            }
+
+            isMale(){
+                return this._gender
+            }
+            checkApple(apple){
+                apple.Weight
+            }
+            eat(apple){
+                if(apple.weight > 0){
+                    apple.decrease()
+                } else {
+                    alert("Hết")
+                }
+            }
+            say(str){
+                console.log("Hello")
+            }
+            get name (){
+                return this._name
+            }   
+            set name (newname){
+                this._name = newname;
+            }  
+            get weight (){
+                return this._weight;
+            }
+            set weight (newweight){
+                this._weight = newweight;
+            }
+        }
+
+        var apple = new Apple(10);
+        var human = new Human("Kien","Male",50)
+        console.log(human.name)
+        human.eat(apple)
+        console.log(apple.weight)
+        
+        function eat1(){
+            human.eat(apple)
+            document.getElementById("result").innerHTML = apple.weight
+        }
+        
+        
+    </script>
+</body>
+</html>

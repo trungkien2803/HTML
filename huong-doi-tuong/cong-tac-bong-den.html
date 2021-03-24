@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+    button {
+        width: 100px;
+        height: 40px;
+        color: white;
+        background-color: red;
+        border: none;
+        outline: none;
+        margin-left: 65px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: rgb(240, 75, 75);
+    }
+</style>
+<body>
+    <button onclick="on()">On</button>
+    <button onclick="off()">Off</button>
+    <div style="background-color: white;" id="lamp">
+        
+    </div>
+    <script>
+        let SwitchButton = function(){
+            this.connectToLamp = function(electriclamp){
+                this.lamp = electriclamp
+            }
+            this.switchOff = function(){
+                this.lamp.turnOff()
+            }
+            this.switchOn = function(){
+                this.lamp.turnOn()
+            }
+        }
+
+        let ElectricLamp = function(){
+            this.status = false;
+            
+            this .turnOff = function(){
+               this.status = "tắt";
+            }
+            this.turnOn = function(){
+               this.status = "bật"
+            }
+        }
+
+        var button = new SwitchButton()
+        var lamp = new ElectricLamp() 
+        button.connectToLamp(lamp)
+
+        function on(){
+            button.switchOn()
+            document.getElementById("lamp").style.background = "rgb(253, 253, 83)"
+        }
+        function off(){
+            button.switchOff()
+            document.getElementById("lamp").style.background = "white"
+        }
+       
+    </script>
+</body>
+</html>

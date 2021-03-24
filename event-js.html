@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input{
+      height: 30px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" onclick ="Showme()" value="input">   <p>onclick</p> <br>
+    <input type="text" ondblclick ="Showme()" value="input"> <p>ondblclick</p> <br>
+    <input type="text" onchange ="Showme()" value="input"> <p>onchange</p> <br>
+    <input type="text" onmouseover ="Showme()" value="input"> <p>onmouseover</p> <br>
+    <input type="text" onmouseout ="Showme()" value="input"> <p>onmouseout</p> <br>
+    <input type="text" onmousemove ="Showme()" value="input"> <p>onmousemove</p> <br>
+    <input type="text" onkeydown ="Showme()" value="input"> <p>onkeydown</p> <br>
+    <input type="text" onkeyup ="Showme()" value="input"> <p>onkeyup</p> <br>
+    <input type="text" onkeypress ="Showme()" value="input"> <p>onkeypress</p> <br>
+    <input type="text" onblur ="Showme()" value="input"> <p>onblur</p> <br>
+    <input type="text" oncopy ="Showme()" value="input"> <p>oncopy</p> <br>
+    <input type="text" oncut ="Showme()" value="input"> <p>oncut</p> <br>
+    <input type="text" onpaste ="Showme()" value="input"> <p>onpaste</p> <br>
+
+  </div>
+     <script>
+       function Showme(){
+         alert("Hello")
+       }
+     </script>
+</body>
+</html>

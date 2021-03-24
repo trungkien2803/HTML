@@ -14,20 +14,37 @@
             position: absolute;
             left: 800px;
             top: 67px;
+            background-color: black;
+            color: white;
+        }
+        .yes {
+            right: 800px;
+            position: absolute;
+            top: 67px;
+            background-color: violet;
+            border: 1px solid pink;
+            color: white;
+        }
+        button {
+
+            width: 100px;
+            height: 60px;
+            font-size: 20px;
+
         }
     </style>
 </head>
 <body>  
     <div class="container">
-        <h2>Do you love me</h2>
-        <button type="button" onclick="yes()">Yes</button>
+        <h1 style="margin: 0; color: violet;">Do you love me?</h1>
+        <button class="yes" type="button" onclick="yes()">Yes</button>
         <button id="no" type="button" onmouseover="no()">No</button>
     </div>
 
 
     <script>
         function yes (){
-            alert('Yes. You are right')
+            alert('Me too')
         }
         debugger
         function no(){

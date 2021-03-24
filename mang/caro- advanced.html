@@ -2,61 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>fds</title>
+    <style>
+        td {
+            height: 100px;
+            width: 100px;
+            font-size: 30px;
+        }
+
+        table {
+            border: 1px solid dimgray;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-    
-    <p id="output" ></p>
-    <input  type="button" name="button" id="1" value="Change" onclick="change()">
-
-    <script>
-        var arr = [];
-        var str = "";
-
-        for(let i = 0; i < 3; i++){
-            arr[i] = new Array(" . "," . "," . ")
-        }
-
-        for(let i = 0; i < 3; i++){
-            for(let j = 0; j < 3; j++){
-                str += arr[i][j] +" &nbsp;&nbsp;&nbsp"
-            }
-            str += "<br>"
-        }
-
-        document.getElementById('output').innerHTML = str
-
-
-        function change(){
-            var positionX = prompt("X ");
-            var positionY = prompt("Y ");
-                str = "";
-                arr[positionX][positionY] = prompt("0 or X")
-
-            for(let i = 0; i < 3; i++){
-                for(let j = 0; j < 3; j++){
-                    str += arr[i][j] +" &nbsp;&nbsp;&nbsp;&nbsp"
-                }
-                str += "<br>"
-            }
-            
-
-        
-
-        }
-
-        
-
-      
-
-       
-
-
-
-    </script>
-       
 </body>
 </html>
+    <script>
+        let arr=    [["","",""], ["","",""], ["","",""]];
+        let table;
+        table = "<table cellspacing='0' border='1px'>"
+        for (let i=0; i<3; i++) {
+            table = table +"<tr>";
+            for (let j=0;j<3; j++) {
+                let id=""+i+j;
+                table = table + "<td id="+id+"' onclick='onClick(this.id, "+i+", "+j+")' >"+arr[i][j]+"</td>"
+            }
+            table= table + "</tr>";
+        }
+        table = table + "</table>";
+        document.write(table);
+
+
+        let XO = 2;
+        function onClick(id,i,j) {
+
+            let a=document.getElementById(id).innerHTML;
+                if (a== "") {
+                    if (XO%2===0) {
+                        document.getElementById(id).innerHTML = "X";
+                        XO++;
+                    } else {
+                        document.getElementById(id).innerHTML = "O";
+                        XO++;
+                    }
+                } arr[i][j] = document.getElementById(id).innerHTML;
+            checkWin();
+            }
+
+
+        function checkWin () {
+            let winner="";
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i][0] === arr[i][1] && arr[i][0] === arr[i][2] && arr[i][0] !== "") {
+                    winner = arr[i][0];
+                    alert("Winner: " + winner)
+                    break;
+                }
+
+            }
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[0][j] === arr[1][j] && arr[0][j] === arr[2][j] && arr[0][j] !== "") {
+                    winner = arr[0][j];
+                    alert("Winner: " + winner)
+                    break;
+                }
+            }
+
+            if(arr[0][0]===arr[1][1]&&arr[0][0]===arr[2][2]&&arr[0][0]!==""){
+                winner=arr[0][0];
+                alert("Winner: "+winner)
+            }
+            if(arr[0][2]===arr[1][1]&&arr[0][2]===arr[2][0]&&arr[0][2]!==""){
+                winner=arr[0][2];
+                alert("Winner: "+winner)
+            }
+        }
+    </script>

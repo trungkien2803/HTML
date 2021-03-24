@@ -19,4 +19,43 @@ html {
 
 .container {
     font-size: 1.8rem;
+    margin-left: 50px;
+}
+input {
+    background-color: #50af50;
+    color: white;
+    width: 65px;
+    height: 34px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    
+}
+#add-input {
+    width: 500px;
+    height: 30px; 
+    background-color: white; 
+    color: black; 
+    border: 1px solid black; 
+    text
+}
+#add-btn {
+    width: 65px; 
+    height: 34px; 
+    background-color: #50af50; 
+    color: white; 
+    border: none; 
+    outline: none;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.header {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+.content {
+    
+}
+input:hover, #add-btn:hover {
+    background-color: #72be72;
 }

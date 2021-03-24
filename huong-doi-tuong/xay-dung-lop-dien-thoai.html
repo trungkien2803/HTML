@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let Mobile = function (battery) {
+        if (battery < 0 || battery > 100) {
+          alert("Giá trị battery không hợp lệ");
+        }
+        this.battery = battery;
+        this.messageWriting = "";
+        this.message = "";
+        this.messageSend = "";
+        this.isOn = true;
+        this.status = function () {
+          if (Mobile.isOn) {
+            alert("On");
+          } else {
+            alert("Off");
+          }
+        };
+        this.onOff = function () {
+          return (this.isOn = !this.isOn);
+          this.consume();
+        };
+        this.charge = function (time) {
+          if (this.battery < 100) {
+            return (this.battery = battery + time);
+          }
+        };
+        this.texting = function (str) {
+          if (!this.isOn) {
+            return;
+          } else {
+            return (this.messageWriting += str);
+          }
+          this.consume();
+        };
+        this.setMessage = function (message) {
+          this.message = message;
+          this.consume();
+        };
+        this.getMessage = function () {
+          if (!this.isOn) {
+            return;
+          } else {
+            this.consume();
+            return this.message;
+          }
+        };
+        this.sendMessage = function (message, name) {
+          if (!this.isOn) {
+            return;
+          } else {
+            name.setMessage(message);
+            this.messageSend = message;
+            this.consume();
+          }
+        };
+        this.consume = function () {
+          this.battery -= 1;
+        };
+      };
+
+      var iphone = new Mobile(54);
+      var samsung = new Mobile(53);
+
+      iphone.sendMessage("fgdgdfgsdf", iphone);
+      iphone.sendMessage("fgdgdfgsdf", iphone);
+      iphone.sendMessage("fgdgdfgsdf", iphone);
+      iphone.sendMessage("fgdgdfgsdf", iphone);
+
+      var message = iphone.messageSend;
+
+      var messagess = iphone.getMessage();
+
+      console.log(messagess)
+    </script>
+  </body>
+</html>

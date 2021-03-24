@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,8 @@
         .container {
             margin-top: 30px;
         }
-        img{
+
+        img {
             width: 500px;
             height: 120px;
             object-fit: cover;
@@ -18,64 +20,99 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div id = "1">
-            <img id="img1" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat1.jpg" alt="Photo">
-       
-            <img id="img2" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat2.jpg" alt="Photo">
-       
-            <img id="img3" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat3.jpg" alt="Photo">
-       
-            <img id="img4" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat4.jpg" alt="Photo">
-      
-            <img id="img5" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)" style="" src="/Cau-truc-dieu-kien/puzzle-img/cat5.jpg" alt="Photo">
+        <div id="1">
+            <img id="img1" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)"
+                src="/Cau-truc-dieu-kien/puzzle-img/monkey1.jpg" alt="Photo">
+
+            <img id="img2" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)"
+                src="/Cau-truc-dieu-kien/puzzle-img/cat2.jpg" alt="Photo">
+
+            <img id="img3" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)"
+                src="/Cau-truc-dieu-kien/puzzle-img/cat3.jpg" alt="Photo">
+
+            <img id="img4" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)"
+                src="/Cau-truc-dieu-kien/puzzle-img/cat4.jpg" alt="Photo">
+
+            <img id="img5" class="red" style="box-shadow: 1px 1px 1px 1px black;" onclick="change(this.id)"
+                src="/Cau-truc-dieu-kien/puzzle-img/cat5.jpg" alt="Photo">
         </div>
     </div>
     <script>
-        var img = [
-        "/Cau-truc-dieu-kien/puzzle-img/monkey1.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/monkey2.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/monkey3.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/monkey4.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/monkey5.jpg",
-    
-        "/Cau-truc-dieu-kien/puzzle-img/panda1.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/panda2.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/panda3.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/panda4.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/panda5.jpg",
+        
 
-        "/Cau-truc-dieu-kien/puzzle-img/cat1.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/cat2.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/cat3.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/cat4.jpg",
-        "/Cau-truc-dieu-kien/puzzle-img/cat5.jpg",
-        ]
-                    
-        
-        
-        
 
         function change(id) {
-            var a = Math.floor(Math.random() * img.length );
+            var img = [
+                "/Cau-truc-dieu-kien/puzzle-img/monkey1.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/monkey2.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/monkey3.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/monkey4.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/monkey5.jpg",
+
+                "/Cau-truc-dieu-kien/puzzle-img/panda1.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/panda2.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/panda3.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/panda4.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/panda5.jpg",
+
+                "/Cau-truc-dieu-kien/puzzle-img/cat1.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/cat2.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/cat3.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/cat4.jpg",
+                "/Cau-truc-dieu-kien/puzzle-img/cat5.jpg",
+            ]
+            var a = Math.floor(Math.random() * img.length);
             document.getElementById(id).src = img[a];
 
+            var img1 = (document.getElementById("img1").src).substring(21)
+            var img2 = (document.getElementById("img2").src).substring(21)
+            var img3 = (document.getElementById("img3").src).substring(21)
+            var img4 = (document.getElementById("img4").src).substring(21)
+            var img5 = (document.getElementById("img5").src).substring(21)
+
+
+
+
+            if(img1 == img[0] && img2 == img[1] && img3 == img[2] && img4 == img[3] && img5 == img[4]){
+                document.getElementById("img1").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img2").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img3").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img4").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img5").style.boxShadow = "1px 1px 1px 1px red"
+            }
+
+            else if(img1 == img[5] && img2 == img[6] && img3 == img[7] && img4 == img[8] && img5 == img[9]){
+                document.getElementById("img1").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img2").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img3").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img4").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img5").style.boxShadow = "1px 1px 1px 1px red"
+            }
+
+            else if(img1 == img[10] && img2 == img[11] && img3 == img[12] && img4 == img[13] && img5 == img[14]){
+                document.getElementById("img1").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img2").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img3").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img4").style.boxShadow = "1px 1px 1px 1px red"
+                document.getElementById("img5").style.boxShadow = "1px 1px 1px 1px red"
+            }
+
         }
-
-        var img1 = document.getElementById("img1").src.substring(length-7)
-        var img2 = document.getElementById("img2").src.substring(length-7)
-        var img3 = document.getElementById("img3").src.substring(length-7)
-        var img4 = document.getElementById("img4").src.substring(length-7)
-        var img5 = document.getElementById("img5").src.substring(length-7)
-
         
 
         
 
-       
-        
-        
+
+
+
+
+
+
+
     </script>
 </body>
+
 </html>

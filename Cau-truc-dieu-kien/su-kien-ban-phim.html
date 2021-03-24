@@ -11,11 +11,11 @@
 </head>
 <body onload="docReady()">
 
-    <img style="position: absolute;left: 0; top: 0;" id="nobita" src="/Cau-truc-dieu-kien/nobita.png" alt="photo">        
+    <img style="position: absolute; left: 0; top: 0;" id="nobita" src="/Cau-truc-dieu-kien/nobita.png" alt="photo">        
 
     <script>
         
-
+        
     function upArrowPressed() {
         var element = document.getElementById("nobita");
             element.style.top = parseInt(element.style.top) - 5 + 'px';
@@ -32,7 +32,7 @@
             element.style.left = parseInt(element.style.left) - 5 + 'px';
     }
 
-
+    
     function rightArrowPressed() {
         var element = document.getElementById("nobita");
             element.style.left = parseInt(element.style.left) + 5 + 'px';
@@ -60,7 +60,7 @@
 
 
     function docReady() {
-    window.addEventListener('keydown', moveSelection);
+        window.addEventListener('keydown', moveSelection);
     }
 
     </script>

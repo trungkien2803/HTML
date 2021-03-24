@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
+
 <body>
-    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3"></canvas>
 
     <script>
-        var Rectangle = function (width,height){
-            this.width = width;
-            this.height = height;
-
-            this.dienTich = function(){
-                return width * height;
+        class Rectangle {
+            constructor(width,height){
+                this._width = width;
+                this._height = height;
             }
+            
 
-            this.chuVi = function(){
-                return (width + height) * 2;
+            dienTich = function () {
+                return this._width * this._height;
+            };
+
+            chuVi = function () {
+                return (this._width + this._height) * 2;
+            };
+            set width(w){
+                this._width = w
             }
-
-            this.createRectangle = function(){
+            get width(){
+                return this._width
+            }
+            createRectangle = function () {
                 var draw = document.getElementById("myCanvas").getContext("2d");
-                draw.strokeRect(400,200,width,height)
-            }
-        }
+                draw.strokeRect(400, 200, this._width, this._height);
+            };
+        };
+        v
+        var rectangle = new Rectangle(500, 200);
 
-        var rectangle = new Rectangle(500,200)
-        
-
-        rectangle.createRectangle()
-        
+        rectangle.createRectangle();
     </script>
-
 </body>
+
 </html>

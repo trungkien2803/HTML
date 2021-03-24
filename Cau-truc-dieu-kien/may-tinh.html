@@ -49,7 +49,8 @@
         <table>
             <tr>
                 <td>
-                    <input onclick="display.value += '1'"class = "number" type="button" value="1">
+                    <!-- <input onclick="display.value += '1'"class = "number" type="button" value="1"> -->
+                    <button onclick= " myFunction(this.id)"class = "number" type="button" value= "1" id="1"> 1 </button>
                      
                 </td>
                 <td>
@@ -112,7 +113,7 @@
                 </td>
                 <td>
                     <input onclick="display.value = eval(display.value)" class="system" type="button" value="=">
-                    
+                    <!-- <input onclick="equal()" class="system" type="button" value="="> -->
                 </td>
                 <td>
                     <input onclick="display.value += '/'" class="system" type="button" value="/">
@@ -123,6 +124,17 @@
     </form>
         
     </div>
+     
 
+    <script>
+        function myFunction(id){
+            var a = document.getElementById(id).value;
+            document.getElementById("display").value += a;
+            
+        }
+        function equal(){
+            document.getElementById("display").value = eval(display.value)
+        }
+    </script>
 </body>
 </html>
